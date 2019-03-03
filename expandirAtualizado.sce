@@ -3,13 +3,10 @@ function [filhos] = expandirAtualizado(no, mapa, memoria)
     vet = []
     filhos=[]
     
-    //disp('acumula')
-    //disp(memoria)
+    h = [10 15 25 35 45];
     
-    //Heurística
-    
-    
-    //Primeira linha
+    disp(no);
+    pause
     
     if no(1,1) == 1 then
        //cidades = find(mapa(1,:)<>0)
@@ -18,9 +15,8 @@ function [filhos] = expandirAtualizado(no, mapa, memoria)
        
        while i<=5
            if mapa(1,i) <> 0 & i<>memoria(1,:) then
-             vet=[i; 2; no(3,1)+mapa(1,i); no(4,1)+1];
-                //disp(vet);
-                //pause
+                 vet=[i; 2; mapa(1,i)+no(3,1); no(4,1)+1; mapa(1,i)+no(3,1)+h(i)];
+         
                 [filhos] = [filhos vet];
             end
            
@@ -34,10 +30,9 @@ function [filhos] = expandirAtualizado(no, mapa, memoria)
     if no(1,1) == 2 then
        while i<=5
            if mapa(2,i) <> 0 & i<>memoria(1,:) then
-           vet=[i; 2; no(3,1)+mapa(2,i); no(4,1)+1];
-            //disp(vet);
-            //pause
-           [filhos] = [filhos vet];
+                 vet=[i; 2; mapa(2,i)+no(3,1); no(4,1)+1;mapa(2,i)+no(3,1)+h(i)];
+              
+              [filhos] = [filhos vet];
             end
            
             i=i+1;
@@ -50,9 +45,8 @@ function [filhos] = expandirAtualizado(no, mapa, memoria)
     if no(1,1) == 3 then
        while i<=5
            if mapa(3,i) <> 0 & i<>memoria(1,:) then
-           vet=[i; 2; no(3,1)+mapa(3,i); no(4,1)+1];
-            //disp(vet);
-            //pause
+                  vet=[i; 2; mapa(3,i)+no(3,1); no(4,1)+1;mapa(3,i)+no(3,1)+h(i)];
+                  
            [filhos] = [filhos vet];
             end
            
@@ -65,9 +59,8 @@ function [filhos] = expandirAtualizado(no, mapa, memoria)
     if no(1,1) == 4 then
        while i<=5
            if mapa(4,i) <> 0 & i<>memoria(1,:) then
-           vet=[i; 2; no(3,1)+mapa(4,i); no(4,1)+1];
-            //disp(vet);
-            //pause
+                  vet=[i; 2; mapa(4,i)+no(3,1); no(4,1)+1;mapa(4,i)+no(3,1)+h(i)];
+
            [filhos] = [filhos vet];
             end
            
@@ -80,9 +73,8 @@ function [filhos] = expandirAtualizado(no, mapa, memoria)
     if no(1,1) == 5 then
        while i<=5
            if mapa(5,i) <> 0 & i<>memoria(1,:) then
-           vet=[i; 2; no(3,1)+mapa(5,i); no(4,1)+1];
-            //disp(vet);
-            //pause
+                  vet=[i; 2; mapa(5,i)+no(3,1); no(4,1)+1;mapa(5,i)+no(3,1)+h(i)];
+
            [filhos] = [filhos vet];
             end
            

@@ -23,8 +23,8 @@ function resultado = BuscaGeral(mapa,partida, destino, borda)
         //disp(borda)
         [no, borda] = guloso(borda);
         
-        //disp(no);
-        //pause
+        disp(no);
+        pause
         
         lembre = Verificar(memoria, no);
         
@@ -46,8 +46,8 @@ function resultado = BuscaGeral(mapa,partida, destino, borda)
             //pause
             [filhos] = expandirAtualizado(no, mapa, memoria);
           //  disp('filhos')
-          //  disp(filhos)
-          //  pause
+            disp(filhos)
+            pause
             
             [borda] = InserirNo(filhos, borda);
             //disp(borda);
