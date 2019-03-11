@@ -2,8 +2,6 @@ function ret = verificar_mapa(mapa)
     
     tamanho = size(mapa);
     
-    //find(mapa(1,:)<>0)
-    
     ret = 1;
     
     for i=1:tamanho(1)
