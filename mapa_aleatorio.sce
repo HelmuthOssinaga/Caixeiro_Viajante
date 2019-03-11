@@ -29,7 +29,7 @@ function [mapa] = mapa_aleatorio( n )
         end
     end
     
-    
+    //resultado = BuscaGeral(mapa)
     
     
 endfunction

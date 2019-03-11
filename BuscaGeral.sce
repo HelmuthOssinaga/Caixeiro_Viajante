@@ -25,7 +25,7 @@ mapa = [0 71  0 151 0  0   0  0   0  0   0  0   0  0  0   0  0 0   0 0;
 //destino = 4
 //borda = []
 
-function resultado = BuscaGeral(mapa,partida, destino, borda)
+function resultado = BuscaGeral(mapa,partida, coordenadas, destino, borda)
     node = [];
     resultado = 1;
     filhos = [];
@@ -45,8 +45,8 @@ function resultado = BuscaGeral(mapa,partida, destino, borda)
         //disp(borda)
         [no, borda] = guloso(borda);
         
-        disp(no);
-        pause
+        //disp(no);
+        //pause
         
         lembre = Verificar(memoria, no);
         
@@ -66,10 +66,10 @@ function resultado = BuscaGeral(mapa,partida, destino, borda)
             //pause
             //disp(no)
             //pause
-            [filhos] = expandirAtualizado(no, mapa, memoria);
+            [filhos] = expandirAtualizado(no, mapa, memoria, coordenadas, destino);
           //  disp('filhos')
-            disp(filhos)
-            pause
+            //disp(filhos)
+            //pause
             
             [borda] = InserirNo(filhos, borda);
             //disp(borda);
