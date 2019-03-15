@@ -14,6 +14,8 @@ function final = principal( n )
     end    
         [coordenadas] = gerar_coordenadas( n );
         
+        plotar_grafico(mapa, coordenadas);
+        
         partida = input('Insira o seu ponto de partida');
         destino = input('Insira o seu ponto de destino');
         

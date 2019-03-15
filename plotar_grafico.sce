@@ -3,44 +3,30 @@ function plotar_grafico(mapa, coordenadas)
     x = [];
     y = [];
     
+    i = 1;
+    tam = size(coordenadas)
     
-    tam = size(coordenadas);
-    
-    
-    for i=1:tam(1)
-        //vizinhas = find(mapa(i,:)<>0);
-        //disp('vizinho');
-        //disp(vizinhas);
-        //pause
+    while i<=tam(1)
         
+        [x] = [x coordenadas(i,2)];
+        [y] = [y coordenadas(i,3)];
         
-        [x] = [x coordenadas(i,2) ];
-        //disp('Eixo X');
-        //disp(x);
-        //pause
-        
-        [y] = [y coordenadas(i,3) ];
-        //disp('Eixo Y');
-        //disp(y);
-        //pause
-        
-        [x] = [x coordenadas(1,2)];
-        [y] = [y coordenadas(1,3)];
-        
-        //cont = size(vizinhas);
-        //j = 1;
-        
-        //while j <= cont(2)
+        if mapa(i,:) <> 0 then
+            vizinhos = []
+            [vizinhos] = [mapa(i,:)<>0 vizinhos];
             
-            //[x] = [x coordenadas(vizinhas(j),2) ];
-            //[y] = [y coordenadas(vizinhas(j),3) ];
+            qnt_v = size(vizinhos);
             
-            //j = j+1;
-        //end
+            for j=1:qnt_v(2)
+                [x] = [x coordenadas(j,2)];
+                [y] = [y coordenadas(j,3)];
+            end
+        end
         
+        plot(x,y);
+        
+        i=i+1;
     end
-    
-    unzoom(plot(x,y));
     
     
 endfunction

@@ -58,6 +58,12 @@ function resultado = BuscaGeral(mapa,partida, coordenadas, destino, borda)
         if no(1,1) == destino then
             disp('Chegou!');
             disp(no);
+            
+            nos_exp = size(memoria);
+            
+            disp('Quantidade de nós: ');
+            disp(nos_exp(2));
+            
             resultado = 0;
         else
             memoria = [memoria no];
