@@ -1,35 +1,39 @@
-function [mapa] = mapa_aleatorio( n )
-    
-    a = 1
+
+function [mapa] = mapa_aleatorio()
+
+    a = 1;
     val = []
-    form = ((n*n)-n)/2
+    posi = [];
     
-    for l=1:form
-        quant = int(rand()*100);
-        [val] = [quant val] ;
+    for l=1:1225
+        quant = int(grand(1, 1, "unf", 10, 1000));
+        [val] = [val quant] ;
     end
     
-    for i=1:n
-        for j=1:n
-               if i==j then
-                    mapa(i,j)=0;
-                else
+    for i=1:50
+        for j=1:50
+            //disp(a);
+               if i == j then
+                   mapa(i,j) = 0
+            
+               elseif j > i then
                     mapa(i,j)=val(a)
                     mapa(j,i)=val(a)
-                end
-        end
-        a = a+1;
-    end
-    
-    
-    for r=1:n
-        for s=r+1:n
-               mapa(r,s+1:n)=0;
-               mapa(s+1:n,r)=0;
+                    a = a+1;
+                end                
         end
     end
     
-    //resultado = BuscaGeral(mapa)
+    p = 1
+    while p <=500
+        posi = int(grand(1, 2, "unf", 1, 50));
+        x = posi(1);
+        y = posi(2);
+        mapa(x, y) = 0;
+        mapa(y, x) = 0;
+        
+        p = p+1;
+    end
     
     
 endfunction

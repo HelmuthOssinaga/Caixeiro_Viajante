@@ -4,6 +4,6 @@ function [node]=CriarNo(problema)
     profundidade = 0;
     f = 0;
     
-    [node] = [problema; mov; custo; profundidade;f];
+    [node] = [problema; mov; custo; profundidade; f];
     
 endfunction

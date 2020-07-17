@@ -1,4 +1,5 @@
 function [heuristicas] = gerar_heuristica(coordenadas, destino)
+    heuristicas = [];
     
     tam = size(coordenadas);
     
@@ -11,7 +12,8 @@ function [heuristicas] = gerar_heuristica(coordenadas, destino)
             
             h = (a*a) + (b*b);
             
-            val = int(sqrt(h)*5);
+            val = int(sqrt(h)*3);
+            
             [heuristicas] = [heuristicas val];
         end
     end

@@ -1,13 +1,13 @@
-function [no, borda] = guloso(borda)
+function [no, borda] = gulosoEstrela(borda)
     
     tamanho = size(borda)
-    menor = min(borda(3,:))
+    menor = min(borda(5,:))
     i = 1
     bug = 1
     
     while i<=tamanho(2) & bug == 1
         
-         if borda(3,i) == menor then
+         if borda(5,i) == menor then
             [no] = borda(:,i)
             borda(:,i) = []
             bug = 0

@@ -1,4 +1,4 @@
-function [nodes, contador]  = BuscaGeral(mapa,partida, coordenadas, destino, borda)
+function [nodes, contador]  = BuscaGeralProfundidade(mapa,partida, coordenadas, destino, borda)
 
     node = [];
     resultado = 1;
@@ -17,7 +17,7 @@ function [nodes, contador]  = BuscaGeral(mapa,partida, coordenadas, destino, bor
         
         no = [];
         
-        [no, borda] = gulosoEstrela(borda);
+        [no, borda] = RemovePrimeiroProfundidade(borda);
         
         lembre = Verificar(memoria, no);
         
