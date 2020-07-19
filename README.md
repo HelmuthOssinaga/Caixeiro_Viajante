@@ -1,6 +1,7 @@
 # Problema do caminho minimo
 
-Instruções:\n
+Instruções:  
+
 Para rodar o algoritmo Deep Q-Learning é necessário utilizar:  
 
 -Distribuição Anaconda, software Spyder  
