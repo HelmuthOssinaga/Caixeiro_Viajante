@@ -2,6 +2,14 @@
 
 Instruções:  
 
+Para rodar o algoritmo de busca:  
+
+- É necessário ter o software Scilab  
+
+- Executar o arquivo principal.sce (Caso queira alterar o destino e a origem, editar o arquivo)  
+
+
+
 Para rodar o algoritmo Deep Q-Learning é necessário utilizar:  
 
 -Distribuição Anaconda, software Spyder  
